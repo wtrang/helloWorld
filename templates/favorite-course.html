@@ -5,5 +5,5 @@
 {% block page_header %}Favorite Course{% endblock %}
 
 {% block page_content %}
-    <p>You entered you favorite course as: {{ request.args.get('subject') }} {{ request.args.get('course_number') }}</p>
+    <p>You entered you favorite course as: {{ request.args.get('subject_name') }} {{ request.args.get('course_number') }}</p>
 {% endblock %}
