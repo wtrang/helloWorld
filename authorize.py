@@ -13,6 +13,6 @@ def role_required(roles):
                 return render_template('access_denied.html')
             if callable(getattr(current_app, "ensure_sync", None)):
                 return current_app.ensure_sync(func)(*args, **kwargs)
-            return func(*args, *kwargs)
+            return func(*args, **kwargs)
         return wrapper
     return decorator
